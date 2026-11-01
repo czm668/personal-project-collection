@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QueryManagement</class>
+ <widget class="QWidget" name="QueryManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>查询管理</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- 查询类型选择 -->
+   <item>
+    <widget class="QGroupBox" name="groupBox_queryType">
+     <property name="title">
+      <string>查询类型</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_queryType">
+        <property name="text">
+         <string>选择查询类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_queryType">
+        <item>
+         <property name="text">
+          <string>客房查询</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>客户查询</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>预订查询</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   
+   <!-- 查询条件区域 -->
+   <item>
+    <widget class="QGroupBox" name="groupBox_conditions">
+     <property name="title">
+      <string>查询条件</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <!-- 房间条件 -->
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_roomCondition">
+        <property name="text">
+         <string>房间条件：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_roomCondition">
+        <property name="placeholderText">
+         <string>房间号/类型/状态</string>
+        </property>
+       </widget>
+      </item>
+      
+      <!-- 客户条件 -->
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_guestCondition">
+        <property name="text">
+         <string>客户条件：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEdit_guestCondition">
+        <property name="placeholderText">
+         <string>姓名/身份证/电话</string>
+        </property>
+       </widget>
+      </item>
+      
+      <!-- 日期范围 -->
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_dateRange">
+        <property name="text">
+         <string>日期范围：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDateEdit" name="dateEdit_start">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>至</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QDateEdit" name="dateEdit_end">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      
+      <!-- 查询和重置按钮 -->
+      <item row="1" column="4">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_query">
+          <property name="text">
+           <string>查询</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_reset">
+          <property name="text">
+           <string>重置</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   
+   <!-- 查询结果表格 -->
+   <item>
+    <widget class="QGroupBox" name="groupBox_results">
+     <property name="title">
+      <string>查询结果</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="tableWidget_results">
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

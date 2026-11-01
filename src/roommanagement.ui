@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RoomManagement</class>
+ <widget class="QWidget" name="RoomManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>客房管理</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>客房管理</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_form">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_roomnum">
+       <property name="text">
+        <string>房间号：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_roomnum">
+       <property name="placeholderText">
+        <string>如：101、202</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_type">
+       <property name="text">
+        <string>房间类型：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="lineEdit_type">
+       <property name="placeholderText">
+        <string>如：单人间、双人间、套房</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_price">
+       <property name="text">
+        <string>价格（元/晚）：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_price">
+       <property name="placeholderText">
+        <string>如：199.99</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_status">
+       <property name="text">
+        <string>状态：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="comboBox_status">
+       <item>
+        <property name="text">
+         <string>空闲</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>已预订</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>维修中</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_desc">
+       <property name="text">
+        <string>房间描述：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QTextEdit" name="textEdit_desc">
+       <property name="placeholderText">
+        <string>请输入房间设施、备注等信息</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+     <item>
+      <widget class="QPushButton" name="pushButton_add">
+       <property name="text">
+        <string>添加</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #27ae60; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_update">
+       <property name="text">
+        <string>修改</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #f39c12; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_delete">
+       <property name="text">
+        <string>删除</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #e74c3c; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_clear">
+       <property name="text">
+        <string>清空</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #95a5a6; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget_rooms">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

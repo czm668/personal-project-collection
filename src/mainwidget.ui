@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>酒店管理系统</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- 顶部标题栏 -->
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="text">
+      <string>酒店管理系统</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   
+   <!-- 功能按钮区 -->
+   <item>
+    <widget class="QWidget" name="widget_buttons" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_room">
+        <property name="text">
+         <string>客房管理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_guest">
+        <property name="text">
+         <string>客户管理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_reservation">
+        <property name="text">
+         <string>预订管理</string>
+        </property>
+       </widget>
+      </item>
+      <!-- 新增查询管理按钮 -->
+      <item>
+       <widget class="QPushButton" name="pushButton_query">
+        <property name="text">
+         <string>查询管理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_userInfo">
+        <property name="text">
+         <string>当前用户：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_logout">
+        <property name="text">
+         <string>退出登录</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   
+   <!-- 内容区域 -->
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget_content">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

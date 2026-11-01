@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReservationManagement</class>
+ <widget class="QWidget" name="ReservationManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>预订管理</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>客房预订管理</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_form">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_room">
+       <property name="text">
+        <string>选择客房：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox_room">
+       <property name="minimumWidth">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_guest">
+       <property name="text">
+        <string>选择客户：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="comboBox_guest">
+       <property name="minimumWidth">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_checkin">
+       <property name="text">
+        <string>入住日期：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateTimeEdit" name="datetimeEdit_checkin">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="dateTime">
+        <datetime>2025-01-01 00:00:00</datetime>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_checkout">
+       <property name="text">
+        <string>退房日期：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QDateTimeEdit" name="datetimeEdit_checkout">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="dateTime">
+        <datetime>2025-01-02 00:00:00</datetime>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_status">
+       <property name="text">
+        <string>预订状态：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_status">
+       <item>
+        <property name="text">
+         <string>预订中</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>已入住</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>已完成</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>已取消</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+     <item>
+      <widget class="QPushButton" name="pushButton_add">
+       <property name="text">
+        <string>添加预订</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #27ae60; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_update">
+       <property name="text">
+        <string>修改预订</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #f39c12; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_delete">
+       <property name="text">
+        <string>删除预订</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #e74c3c; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_clear">
+       <property name="text">
+        <string>清空表单</string>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: #95a5a6; color: white; border: none; padding: 5px 15px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget_reservations">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
